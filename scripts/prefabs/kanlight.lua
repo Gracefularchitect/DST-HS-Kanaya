@@ -1,7 +1,8 @@
 local function fn()    
 local inst = CreateEntity()    
  
-inst.entity:AddNetwork()    
+inst.entity:AddNetwork()
+inst.entity:AddTransform(0.25)
 inst:AddTag("FX")
 
 inst.entity:AddLight() -- adds light to the entity   
@@ -13,12 +14,15 @@ inst.Light:Enable(true)
     
 
 if not TheWorld.ismastersim then        
-return inst    
+	return inst    
 end
 
-inst.entity:SetPristine()        
+inst.entity:SetPristine()    
+    
 inst.persists = false    
+
 return inst
+
 end
 
 return Prefab("common/fx/kanlight", fn)

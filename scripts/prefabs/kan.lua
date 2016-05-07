@@ -4,7 +4,9 @@ local MakePlayerCharacter = require "prefabs/player_common"
 local assets = {
     Asset("SCRIPT", "scripts/prefabs/player_common.lua"),
 }
-local prefabs = {}
+local prefabs = {
+"kanlight",
+}
 
 -- Custom starting items
 local start_inv = {
